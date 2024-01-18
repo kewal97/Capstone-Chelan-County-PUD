@@ -1,0 +1,32 @@
+
+NOTE! Data may not match perfectly because of timing and average vs snapshot issues
+
+
+Rocky Reach Inflow Calculation
+
+
+Wells Flow Impact = flows averaged from previous 90-105 minutes
+Chelan Flow Impact = flows averaged from previous 62-77 minutes (60-75 should be fine)
+Entiat Flow Impact = flows averaged from previous 15-30 minutes
+
+Rocky Reach Inflow = Wells Flow Impact + Chelan Flow Impact + Entiat Flow Impact
+
+
+
+
+Rock Island Inflow Calculation - needs work
+
+Rocky Reach Flow Impact = Depends on Rocky Reach Total Discharge (RRTD) at time (now)
+Wenatchee Flow Impact = flow from 22 minutes ago
+
+Rocky Reach Flow Timing Logic:
+
+If RRTD <= 50, then Rocky Reach Flow Impact = RRTD from 43 min ago 
+If RRTD > 50 & RRTD <= 80, then Rocky Reach Flow Impact = RRTD from 45 min ago
+If RRTD > 80 & RRTD <= 120, then Rocky Reach Flow Impact = RRTD from 47 min ago
+If RRTD > 120 & RRTD <= 150, then Rocky Reach Flow Impact = RRTD from 48 min ago
+If RRTD > 150 & RRTD <= 220, then Rocky Reach Flow Impact = RRTD from 50 min ago
+If RRTD > 220, then Rocky Reach Flow Impact = RRTD from 50 min ago
+
+Rock Island Inflow = Rocky Reach Flow Impact + Wenatchee Flow Impact
+
