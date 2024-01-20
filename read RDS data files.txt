@@ -1,0 +1,5 @@
+
+RDS is an R data type.
+
+You use R, you can read the file using the function readRDS().
+Using python, use the pyreadr.read_r() as described here https://github.com/ofajardo/pyreadr.
